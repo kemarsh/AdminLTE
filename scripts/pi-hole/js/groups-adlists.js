@@ -198,7 +198,7 @@ function initTable() {
   table.on("order.dt", function () {
     var order = table.order();
     if (order[0][0] !== 0 || order[0][1] !== "asc") {
-      $("#resetButton").show();
+      $("#resetButton").removeClass("d-none");
     } else {
       $("#resetButton").hide();
     }
