@@ -66,6 +66,24 @@
     </footer>
 </div>
 <!-- ./wrapper -->
+
+<script src="scripts/vendor/jquery.min.js"></script>
+<script src="scripts/vendor/jquery-ui.min.js"></script>
+<script src="style/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="scripts/vendor/adminlte.min.js"></script>
+<script src="scripts/vendor/bootstrap-notify.min.js"></script>
+
+<?php if(in_array($scriptname, array("groups.php", "groups-clients.php", "groups-domains.php", "groups-adlists.php"))){ ?>
+<script src="style/vendor/bootstrap/js/bootstrap-select.min.js"></script>
+<script src="style/vendor/bootstrap/js/bootstrap-toggle.min.js"></script>
+<?php } ?>
+
+<script src="scripts/vendor/jquery.dataTables.min.js"></script>
+<script src="scripts/vendor/dataTables.bootstrap.min.js"></script>
+<script src="scripts/vendor/moment.min.js"></script>
+<script src="scripts/vendor/Chart.min.js"></script>
+<script src="scripts/vendor/iCheck.min.js"></script>
+
 <script src="scripts/pi-hole/js/footer.js"></script>
 </body>
 </html>
