@@ -192,7 +192,7 @@ function initTable() {
         '<button type="button" class="btn btn-danger btn-xs" id="deleteClient_' +
         data.id +
         '">' +
-        '<span class="far fa-trash-alt"></span>' +
+        '<span class="fa fa-trash-o"></span>' +
         "</button>";
       $("td:eq(3)", row).html(button);
     },
@@ -290,7 +290,7 @@ function addClient() {
     success: function (response) {
       utils.enableAll();
       if (response.success) {
-        utils.showAlert("success", "fas fa-plus", "Successfully added client", ip);
+        utils.showAlert("success", "fa fa-plus", "Successfully added client", ip);
         reload_client_suggestions();
         table.ajax.reload(null, false);
       } else {

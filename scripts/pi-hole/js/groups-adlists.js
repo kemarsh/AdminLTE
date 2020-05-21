@@ -158,7 +158,7 @@ function initTable() {
         '<button type="button" class="btn btn-danger btn-xs" id="deleteAdlist_' +
         data.id +
         '">' +
-        '<span class="far fa-trash-alt"></span>' +
+        '<span class="fa fa-trash-o"></span>' +
         "</button>";
       $("td:eq(4)", row).html(button);
     },
@@ -318,12 +318,7 @@ function editAdlist() {
     success: function (response) {
       utils.enableAll();
       if (response.success) {
-        utils.showAlert(
-          "success",
-          "fas fa-pencil-alt",
-          "Successfully " + done + " adlist ",
-          address
-        );
+        utils.showAlert("success", "fa fa-pencil", "Successfully " + done + " adlist ", address);
         table.ajax.reload(null, false);
       } else {
         utils.showAlert(
