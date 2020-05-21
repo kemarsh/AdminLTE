@@ -279,3 +279,12 @@
 .d-none {
     display: none !important;
 }
+
+.row-centered > div[class^=col-] {
+    display: inline-block;
+    float: none;
+}
+
+.version-info {
+    margin-top: 10px;
+}
