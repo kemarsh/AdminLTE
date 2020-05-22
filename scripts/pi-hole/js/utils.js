@@ -130,7 +130,7 @@ function validateIPv6CIDR(ip) {
   return ipv6validator.test(ip);
 }
 
-function bsSelectDefaults() {
+function setBsSelectDefaults() {
   // set bootstrap-select defaults
   var pickerDEFAULTS = $.fn.selectpicker.Constructor.DEFAULTS;
   pickerDEFAULTS.noneSelectedText = "none selected";
@@ -158,6 +158,6 @@ window.utils = (function () {
     enableAll: enableAll,
     validateIPv4CIDR: validateIPv4CIDR,
     validateIPv6CIDR: validateIPv6CIDR,
-    bsSelectDefaults: bsSelectDefaults
+    setBsSelectDefaults: setBsSelectDefaults
   };
 })();
