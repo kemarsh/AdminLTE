@@ -1255,6 +1255,7 @@ if (isset($_GET['tab']) && in_array($_GET['tab'], array("sysadmin", "adlists", "
     </div>
 </div>
 
+<script src="scripts/pi-hole/js/common-utilities.js"></script>
 <script src="scripts/vendor/jquery.confirm.min.js"></script>
 <script src="scripts/pi-hole/js/settings.js"></script>
 

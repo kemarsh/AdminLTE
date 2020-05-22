@@ -149,6 +149,27 @@ function bsSelect_defaults() {
   };
 }
 
+function stateSaveCallback(itemName, data) {
+  localStorage.setItem(itemName, JSON.stringify(data));
+}
+
+function stateLoadCallback(itemName) {
+  // Receive previous state from client's local storage area
+  var data = localStorage.getItem(itemName);
+  // Return if not available
+  if (data === null) {
+    return null;
+  }
+
+  data = JSON.parse(data);
+  // Always start on the first page to show most recent queries
+  data.start = 0;
+  // Always start with empty search field
+  data.search.search = "";
+  // Apply loaded state to table
+  return data;
+}
+
 window.utils = (function () {
   return {
     showAlert: showAlert,
@@ -157,6 +178,8 @@ window.utils = (function () {
     enableAll: enableAll,
     validateIPv4CIDR: validateIPv4CIDR,
     validateIPv6CIDR: validateIPv6CIDR,
-    bsSelect_defaults: bsSelect_defaults
+    bsSelect_defaults: bsSelect_defaults,
+    stateSaveCallback: stateSaveCallback,
+    stateLoadCallback: stateLoadCallback
   };
 })();

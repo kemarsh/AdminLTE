@@ -156,6 +156,7 @@ if(strlen($showing) > 0)
 </div>
 <!-- /.row -->
 
+<script src="scripts/pi-hole/js/common-utilities.js"></script>
 <script src="scripts/pi-hole/js/queries.js"></script>
 
 <?php

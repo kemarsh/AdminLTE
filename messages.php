@@ -41,7 +41,7 @@
     </div>
 </div>
 
-<script src="scripts/pi-hole/js/groups-common.js"></script>
+<script src="scripts/pi-hole/js/common-utilities.js"></script>
 <script src="scripts/pi-hole/js/messages.js"></script>
 
 <?php
