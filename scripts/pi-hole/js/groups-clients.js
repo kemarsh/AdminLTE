@@ -104,7 +104,7 @@ function initTable() {
         data.id +
         '" title="' +
         tooltip +
-        '" class="breakall">' +
+        '" class="text-break">' +
         data.ip +
         "</code>";
       if (data.name !== null && data.name.length > 0)
@@ -113,7 +113,7 @@ function initTable() {
           data.id +
           '" title="' +
           tooltip +
-          '" class="breakall">' +
+          '" class="text-break">' +
           data.name +
           "</code>";
       $("td:eq(0)", row).html(ip_name);

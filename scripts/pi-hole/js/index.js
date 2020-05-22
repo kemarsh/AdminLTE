@@ -10,6 +10,7 @@
 var timeLineChart, clientsChart;
 var queryTypePieChart, forwardDestinationPieChart;
 
+// TODO: Need to be updated
 var colors = [
   "#3c8dbc",
   "#f56954",
@@ -68,8 +69,8 @@ var customTooltips = function (tooltip) {
     tooltipEl.style.fontFamily = tooltip._bodyFontFamily;
     tooltipEl.style.fontSize = tooltip.bodyFontSize / fontZoom + "px";
     tooltipEl.style.fontStyle = tooltip._bodyFontStyle;
-    // append Tooltip next to canvas-containing box
-    tooltipEl.ancestor = this._chart.canvas.closest(".box[id]").parentNode;
+    // append Tooltip next to canvas-containing card
+    tooltipEl.ancestor = this._chart.canvas.closest(".card[id]").parentNode;
     tooltipEl.ancestor.appendChild(tooltipEl);
   }
 
@@ -1063,7 +1064,7 @@ $(document).ready(function () {
       options: {
         elements: {
           arc: {
-            borderColor: $(".box").css("background-color")
+            borderColor: $(".card").css("background-color")
           }
         },
         legend: {
@@ -1105,7 +1106,7 @@ $(document).ready(function () {
       options: {
         elements: {
           arc: {
-            borderColor: $(".box").css("background-color")
+            borderColor: $(".card").css("background-color")
           }
         },
         legend: {

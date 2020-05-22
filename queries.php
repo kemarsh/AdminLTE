@@ -103,8 +103,8 @@ if(strlen($showing) > 0)
                         </div>
                     </span>
                     <div class="alProcessing">Adding <span id="alDomain"></span> to the <span id="alList"></span>...</div>
-                    <div class="alSuccess text-bold text-green" style="display: none"><span id="alDomain"></span> successfully added to the <span id="alList"></span></div>
-                    <div class="alFailure text-bold text-red" style="display: none">
+                    <div class="alSuccess font-weight-bold text-green" style="display: none"><span id="alDomain"></span> successfully added to the <span id="alList"></span></div>
+                    <div class="alFailure font-weight-bold text-red" style="display: none">
                         <span id="alNetErr">Timeout or Network Connection Error!</span>
                         <span id="alCustomErr"></span>
                     </div>
@@ -114,15 +114,14 @@ if(strlen($showing) > 0)
     </div>
 </div>
 
-<div class="row">
+<div class="row pt-4">
     <div class="col-md-12">
-      <div class="box" id="recent-queries">
-        <div class="box-header with-border">
-          <h3 class="box-title">Recent Queries <?php echo $showing; ?></h3>
+      <div class="card card-outline card-secondary" id="recent-queries">
+        <div class="card-header">
+          <h3 class="card-title">Recent Queries <?php echo $showing; ?></h3>
         </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-            <table id="all-queries" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+        <div class="card-body">
+            <table id="all-queries" class="display table table-striped table-bordered w-100" cellspacing="0">
                 <thead>
                     <tr>
                         <th>Time</th>
@@ -149,9 +148,7 @@ if(strlen($showing) > 0)
             <label><input type="checkbox" id="autofilter">&nbsp;Apply filtering on click on Type, Domain, and Clients</label><br/>
             <button type="button" id="resetButton" hidden="true">Clear Filters</button>
         </div>
-        <!-- /.box-body -->
       </div>
-      <!-- /.box -->
     </div>
 </div>
 <!-- /.row -->

@@ -65,7 +65,7 @@ function initTable() {
           data.id +
           '" title="' +
           tooltip +
-          '" class="breakall">' +
+          '" class="text-break">' +
           data.address +
           "</code>"
       );
