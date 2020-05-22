@@ -7,10 +7,11 @@
 
 /* global moment:false */
 
-var info = null;
 function showAlert(type, icon, title, message) {
+  var info;
   var opts = {};
   title = "&nbsp;<strong>" + title + "</strong><br>";
+
   switch (type) {
     case "info":
       opts = {
