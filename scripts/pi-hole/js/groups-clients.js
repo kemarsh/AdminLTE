@@ -330,13 +330,12 @@ function editClient() {
       return;
   }
 
-  var ipName = ip;
   if (name.length > 0) {
-    ipName += " (" + name + ")";
+    ip += " (" + name + ")";
   }
 
   utils.disableAll();
-  utils.showAlert("info", "", "Editing client...", ipName);
+  utils.showAlert("info", "", "Editing client...", ip);
   $.ajax({
     url: "scripts/pi-hole/php/groups.php",
     method: "post",
@@ -355,7 +354,7 @@ function editClient() {
           "success",
           "glyphicon glyphicon-pencil",
           "Successfully " + done + " client",
-          ipName
+          ip
         );
         table.ajax.reload(null, false);
       } else {
@@ -385,13 +384,12 @@ function deleteClient() {
   var ip = tr.find("#ip_" + id).text();
   var name = tr.find("#name_" + id).text();
 
-  var ipName = ip;
   if (name.length > 0) {
-    ipName += " (" + name + ")";
+    ip += " (" + name + ")";
   }
 
   utils.disableAll();
-  utils.showAlert("info", "", "Deleting client...", ipName);
+  utils.showAlert("info", "", "Deleting client...", ip);
   $.ajax({
     url: "scripts/pi-hole/php/groups.php",
     method: "post",
@@ -400,12 +398,7 @@ function deleteClient() {
     success: function (response) {
       utils.enableAll();
       if (response.success) {
-        utils.showAlert(
-          "success",
-          "glyphicon glyphicon-trash",
-          "Successfully deleted client ",
-          ipName
-        );
+        utils.showAlert("success", "glyphicon glyphicon-trash", "Successfully deleted client ", ip);
         table.row(tr).remove().draw(false).ajax.reload(null, false);
         reloadClientSuggestions();
       } else {
